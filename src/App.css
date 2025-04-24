@@ -1,69 +1,99 @@
 /* App.css */
 
-body, html, #root {
+body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #000; /* Default text color */
 }
 
-.App {
+/* Centering container */
+body {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+  min-height: 100vh;
 }
-
-.centered-container {
-  background: white;
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+.instructions {
+  color: #3d3939; /* Medium gray for subtle instructions */
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+/* Shared section styles */
+.home, .question-form, .result-section {
+  background-color: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
+  max-width: 500px;
   text-align: center;
+  color: #000; /* Ensures all text inside is black */
 }
 
-h1, h2 {
-  color: #333;
-}
-
-.quiz-form,
-.question-form {
-  text-align: left;
-}
-
-.quiz-form div,
-.question-form .answers {
-  margin-bottom: 1rem;
-}
-
+/* Label text for form inputs */
 label {
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+  color: #000;
+  font-weight: 500;
   display: block;
+  margin: 8px 0 4px;
 }
 
+/* Inputs and selects */
 input[type="text"],
 select {
+  padding: 8px;
   width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  margin-top: 0.25rem;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #000; /* Input text color */
+  background-color: #fff;
 }
 
-button {
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 8px;
+/* Radio buttons & options */
+.question-form label {
+  color: #000;
+  display: block;
+  margin-bottom: 6px;
   cursor: pointer;
-  margin-top: 1rem;
+  font-size: 16px;
+}
+
+/* Question text */
+.question-form p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #357ABD
+  background-color: #005a9c;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Result text */
+.result-section p {
+  font-size: 16px;
+  color: #000;
 }
